@@ -3,7 +3,7 @@
 
 = {{{ExampleRules.rl}}} =
 {{{
-<brules type="if" name="ExampleRules">
+<jerrules type="if" name="ExampleRules">
 	<objs>
 		<obj name="objA" clas="my.package.ObjA"/>
 		<obj name="objB" clas="my.package.ObjB"/>
@@ -30,5 +30,5 @@
 			</then>
 		</rule>
 	</rules>
-</brules>
+</jerrules>
 }}}

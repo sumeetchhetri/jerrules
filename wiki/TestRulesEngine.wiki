@@ -6,6 +6,8 @@
 package my.package;
 
 import com.rules.RulesEngine;
+import java.util.List;
+import java.util.ArrayList;
 
 public class TestRulesEngine
 {

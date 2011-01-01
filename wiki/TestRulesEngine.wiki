@@ -5,6 +5,9 @@
 {{{
 package my.package;
 
+package com.test;
+
+import com.rules.Rules;
 import com.rules.RulesEngine;
 import java.util.List;
 import java.util.ArrayList;
@@ -16,8 +19,8 @@ public class TestRulesEngine
         List objs = new ArrayList();
 
         //application specific code
-        my.package.ObjA objA = new my.package.ObjA();
-        my.package.ObjB objB = new my.package.ObjB();	
+        com.test.ObjA objA = new com.test.ObjA();
+        com.test.ObjB objB = new com.test.ObjB();	
 
         //the order of the arguments in the list is important
         //the list contains the bound objects as defined in the rules	        	
@@ -25,8 +28,7 @@ public class TestRulesEngine
         objs.add(objB);
 
         //now create the Rules object required by the Rules Engine
-        //in this example a classpath resource file is considered 
-        Rules rules = RulesEngine.initialize(RulesEngine.class.getResourceAsStream("/my/package/ExampleRules.rl"));
+        Rules rules = RulesEngine.initialize("rules/ExampleRules.rl"));
 
         //now execute the rules
 	RulesEngine.executeRTC(rules,objs);

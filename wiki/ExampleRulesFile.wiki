@@ -1,7 +1,7 @@
 #summary An Example Rules File
 #labels example,rules,file,jerrules
 
-= ExampleRules.rl =
+= {{{ExampleRules.rl}}} =
 {{{
 <brules type="if" name="ExampleRules">
 	<objs>

@@ -1,0 +1,33 @@
+#summary TestRulesEngine.java
+
+= {{{TestRulesEngine.java}}} =
+
+{{{
+package my.package;
+
+import com.rules.RulesEngine;
+
+public class TestRulesEngine
+{
+    public static void main(String[] args)
+    {
+        List objs = new ArrayList();
+
+        //application specific code
+        my.package.ObjA objA = new my.package.ObjA();
+        my.package.ObjB objB = new my.package.ObjB();	
+
+        //the order of the arguments in the list is important
+        //the list contains the bound objects as defined in the rules	        	
+        objs.add(objA);
+        objs.add(objB);
+
+        //now create the Rules object required by the Rules Engine
+        //in this example a classpath resource file is considered 
+        Rules rules = RulesEngine.initialize(RulesEngine.class.getResourceAsStream("/my/package/ExampleRules.rl"));
+
+        //now execute the rules
+	RulesEngine.executeRTC(rules,objs);
+    }
+}
+}}}

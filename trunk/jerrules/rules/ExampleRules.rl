@@ -15,7 +15,7 @@
                 </rule>
                 <rule>          
                         <when>
-                                (objA.getSomeIntProperty()==12345 or objA.someOtherBooleanMethod()) and objA.getSomeStringProperty()=="This is Easy"
+                                (objA.getSomeIntProperty()==12345 or objA.someOtherBooleanMethod()) and objA.getSomeStringProperty().equals("This is Easy")
                         </when>
                         <then>
                                 objB.setSomeOtherTargetProperty(1)

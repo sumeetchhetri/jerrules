@@ -1,0 +1,34 @@
+#summary An Example Rules File
+#labels example,rules,file,jerrules
+
+= ExampleRules.rl =
+{{{
+<brules type="if" name="ExampleRules">
+	<objs>
+		<obj name="objA" clas="my.package.ObjA"/>
+		<obj name="objB" clas="my.package.ObjB"/>
+	</objs>
+	<rules>
+		<rule>		
+			<when>
+				objA.getSomeProperty()==true && objA.someBooleanMethod()
+			</when>
+			<then>
+				objB.setSomeTargetProperty("Hello World")
+                                System.out.println("Laugh out loud")
+			</then>
+		</rule>
+		<rule>		
+			<when>
+				objA.getSomeOtherProperty()==true || objA.someOtherBooleanMethod()
+			</when>
+			<then>
+				objB.setSomeOtherTargetProperty(1)
+                                my.package.ObjC objC = new my.package.ObjC()
+                                objB.setSomeObject(objC)
+                                System.out.println("Laugh out louder")
+			</then>
+		</rule>
+	</rules>
+</brules>
+}}}

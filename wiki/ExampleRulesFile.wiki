@@ -11,7 +11,7 @@
 	<rules>
 		<rule>		
 			<when>
-				objA.getSomeProperty()==true && objA.someBooleanMethod()
+				objA.getSomeBooleanProperty()==true && objA.someBooleanMethod()
 			</when>
 			<then>
 				objB.setSomeTargetProperty("Hello World")
@@ -20,7 +20,7 @@
 		</rule>
 		<rule>		
 			<when>
-				objA.getSomeOtherProperty()==true || objA.someOtherBooleanMethod()
+				(objA.getSomeIntProperty()==12345 || objA.someOtherBooleanMethod()) && objA.getSomeStringProperty()=="This is Easy"
 			</when>
 			<then>
 				objB.setSomeOtherTargetProperty(1)
